@@ -17,3 +17,23 @@ function validateName() {
 
   nameError.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
 }
+
+function validatePhone() {
+  var phone = document.getElementById("contact-phone").value;
+
+  if (phone.length == 0) {
+    phoneError.innerHTML = "Phone Number is Required";
+    return false;
+  }
+  if (phone.length !== 11) {
+    phoneError.innerHTML = "Phone Number Should be 11 digits";
+    return false;
+  }
+  if (!phone.match(/^[0-9]{11}$/)) {
+    phoneError.innerHTML = "Phone Number must be digit";
+    return false;
+  }
+
+  phoneError.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
+  return true;
+}

@@ -12,3 +12,13 @@
   align-items: center;
   justify-content: center;
 }
+.useful-links{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.useful-links a{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}

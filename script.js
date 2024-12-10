@@ -41,17 +41,31 @@ function validatePhone() {
 }
 
 //Functionality for validate Email
-function validateEmail(){
+function validateEmail() {
   var email = document.getElementById("contact-email").value;
 
-  if(email.length == 0){
-    emailError.innerHTML = 'Email is Required';
+  if (email.length == 0) {
+    emailError.innerHTML = "Email is Required";
     return false;
   }
-  if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
-    emailError.innerHTML = 'Invalid Email';
+  if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+    emailError.innerHTML = "Invalid Email";
     return false;
   }
 
   emailError.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
+}
+
+function validateMessage(){
+  var message = document.getElementById("contact-message").value;
+  var required = 30;
+  var left = required - message.length;
+
+  if (left > 0){
+    messageError.innerHTML = `Message should be at least ${required} charecters, ${left} charecters required`;
+    return false;
+  }
+
+  messageError.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
+  return true;
 }

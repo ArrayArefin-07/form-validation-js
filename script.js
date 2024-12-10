@@ -2,6 +2,7 @@ var nameError = document.getElementById("name-error");
 var phoneError = document.getElementById("phone-error");
 var emailError = document.getElementById("email-error");
 var messageError = document.getElementById("message-error");
+var submitError = document.getElementById("submit-error");
 
 //functionality for validate Name
 function validateName() {
@@ -56,6 +57,7 @@ function validateEmail() {
   emailError.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
 }
 
+// Functionality for Validate text message Area
 function validateMessage(){
   var message = document.getElementById("contact-message").value;
   var required = 30;
@@ -68,4 +70,13 @@ function validateMessage(){
 
   messageError.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
   return true;
+}
+
+
+// Validate form when press submit button
+function validateForm(){
+  if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage()){
+    submitError.innerHTML = 'Please Fix Error before submit';
+    return false;
+  }
 }

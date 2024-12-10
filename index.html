@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>git branch -M main</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>git branch -M main</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <i class="fas fa-paper-plane"></i>
 
-  <div class="container">
+        <div class="input-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Please Enter Your Name" />
+          <span id="name-error">Name is required</span>
+        </div>
 
-    <form action="">
+        <div class="input-group">
+          <label>Phone No.</label>
+          <input type="tel" placeholder="123 456 7890" />
+          <span id="phone-error">Phone number is required</span>
+        </div>
 
-      <i class="fas fa-paper-plane"></i>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="Please Enter your Email" />
+          <span id="email-error">Email is required</span>
+        </div>
 
-      <div class="input-group">
-        <label>Full Name</label>
-        <input type="text" placeholder="Please Enter Your Name">
+        <div class="input-group">
+          <label>Your Message</label>
+          <textarea rows="5" placeholder="Please Enter your Message"></textarea>
+          <span id="message-error">Message is required</span>
+        </div>
+
+        <button>Submit</button>
+        <span id="submit-error">Please fix error before submit</span>
+      </form>
+
+      <div class="useful-links">
+        <a href="https://youtube.com">Watch Vedio</a>
+        <a href="https://mobasherarefin.blogspot.com">Watch Blogs</a>
       </div>
-
-      <div class="input-group">
-        <label>Email</label>
-        <input type="email" placeholder="Please Enter your Email">
-      </div>
-
-      <div class="input-group">
-        <label>Your Message</label>
-        <textarea rows="5" placeholder="Please Enter your Message"></textarea>
-      </div>
-
-      <button>Submit</button>
-
-    </form>
-
-    <div class="useful-links">
-      <a href="https://youtube.com">Watch Vedio</a>
-      <a href="https://mobasherarefin.blogspot.com">Watch Blogs</a>
     </div>
-    
-  </div>
-  
-</body>
+  </body>
 </html>

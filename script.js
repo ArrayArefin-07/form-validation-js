@@ -3,6 +3,7 @@ var phoneError = document.getElementById("phone-error");
 var emailError = document.getElementById("email-error");
 var messageError = document.getElementById("message-error");
 
+//functionality for validate Name
 function validateName() {
   var name = document.getElementById("contact-name").value;
 
@@ -18,6 +19,7 @@ function validateName() {
   nameError.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
 }
 
+//Functionality for validate Phone Number
 function validatePhone() {
   var phone = document.getElementById("contact-phone").value;
 
@@ -36,4 +38,20 @@ function validatePhone() {
 
   phoneError.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
   return true;
+}
+
+//Functionality for validate Email
+function validateEmail(){
+  var email = document.getElementById("contact-email").value;
+
+  if(email.length == 0){
+    emailError.innerHTML = 'Email is Required';
+    return false;
+  }
+  if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+    emailError.innerHTML = 'Invalid Email';
+    return false;
+  }
+
+  emailError.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
 }

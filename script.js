@@ -18,6 +18,7 @@ function validateName() {
   }
 
   nameError.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
+  return true;
 }
 
 //Functionality for validate Phone Number
@@ -55,6 +56,7 @@ function validateEmail() {
   }
 
   emailError.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
+  return true
 }
 
 // Functionality for Validate text message Area
@@ -76,7 +78,10 @@ function validateMessage(){
 // Validate form when press submit button
 function validateForm(){
   if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage()){
+    submitError.style.display = 'block';
     submitError.innerHTML = 'Please Fix Error before submit';
+    setTimeout(function(){submitError.style.display = 'none';
+    }, 3000);
     return false;
-  }
+  };
 }

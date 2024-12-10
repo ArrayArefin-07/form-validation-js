@@ -44,3 +44,27 @@
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+.input-group{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  position: relative;
+}
+.input-group label{
+  flex-basis: 30%;
+}
+.input-group input, .input-group textarea{
+  flex-basis: 70%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #999;
+  color: #333;
+  font-size: 16px;
+}
+::placeholder{
+  font-size: 14px;
+}
